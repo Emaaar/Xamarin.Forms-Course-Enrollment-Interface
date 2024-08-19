@@ -1,0 +1,34 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App23.MainPage">
+
+    <StackLayout Padding="20">
+        <Entry x:Name="StudentNumberEntry" Placeholder="Student Number" />
+        <Picker x:Name="ProgramCoursePicker" Title="Program/Course">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>BSIT</x:String>
+                    <x:String>BIT</x:String>
+                    <x:String>BSIE</x:String>
+                    <x:String>BSF</x:String>
+                    <x:String>BSA</x:String>
+                    <x:String>BSHM</x:String>
+
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Year Level:" VerticalOptions="Center" />
+            <RadioButton x:Name="YearLevelRadio1" x:Number="1" />
+            <RadioButton x:Name="YearLevelRadio2" x:Number="2" />
+            <RadioButton x:Name="YearLevelRadio3" x:Number="3" />
+            <RadioButton x:Name="YearLevelRadio4" x:Number="4" />
+        </StackLayout>
+        <Entry x:Name="NumberOfUnitsEntry" Placeholder="Number of Units Enrolled" />
+        <Button Text="Add/Update Student" Clicked="AddOrUpdateStudent" />
+    </StackLayout>
+
+</ContentPage>
